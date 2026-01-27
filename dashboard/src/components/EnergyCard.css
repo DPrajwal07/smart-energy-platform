@@ -1,0 +1,92 @@
+/* Energy Card Component Styles */
+
+.energy-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.energy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Color Variants */
+.energy-card.primary {
+  border-left-color: #667eea;
+}
+
+.energy-card.secondary {
+  border-left-color: #764ba2;
+}
+
+.energy-card.success {
+  border-left-color: #4CAF50;
+}
+
+.energy-card.warning {
+  border-left-color: #FFC107;
+}
+
+/* Card Icon */
+.card-icon {
+  font-size: 32px;
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Card Content */
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.card-value {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.card-value .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.card-value .unit {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .energy-card {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .card-icon {
+    font-size: 28px;
+  }
+
+  .card-value .value {
+    font-size: 22px;
+  }
+}

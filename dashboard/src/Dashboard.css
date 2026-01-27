@@ -1,0 +1,179 @@
+/* Dashboard Component Styles */
+
+.dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* =====================================================================
+   Dashboard Header
+   ===================================================================== */
+
+.dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-content h1 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.header-content .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 20px;
+  }
+
+  .header-content h1 {
+    font-size: 24px;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =====================================================================
+   Summary Cards Section
+   ===================================================================== */
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .summary-cards {
+    padding: 20px;
+    gap: 15px;
+  }
+}
+
+/* =====================================================================
+   Charts Section
+   ===================================================================== */
+
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+.chart-container {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chart-container h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #1a237e;
+}
+
+@media (max-width: 768px) {
+  .charts-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .chart-container {
+    min-width: 0;
+    overflow-x: auto;
+  }
+}
+
+/* =====================================================================
+   Status Section
+   ===================================================================== */
+
+.status-section {
+  padding: 30px;
+  border-top: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.status-section h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.status-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .status-section {
+    padding: 20px;
+  }
+
+  .status-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================================
+   Custom Tooltip for Charts
+   ===================================================================== */
+
+.custom-tooltip {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.custom-tooltip .label {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 5px 0;
+}
+
+.custom-tooltip .value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a237e;
+  margin: 0;
+}
