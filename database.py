@@ -5,6 +5,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy.pool import NullPool
+import os
 
 # ============================================================================
 # Database Configuration
@@ -17,7 +18,11 @@ from sqlalchemy.pool import NullPool
 # 
 # Make sure to replace with your actual database credentials
 
-DATABASE_URL = "postgresql://postgres:password@localhost:5432/smart_energy"
+# Read from environment variable, fallback to local development URL
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "postgresql://postgres:password@localhost:5432/smart_energy"
+)
 
 # ============================================================================
 # Create Database Engine
